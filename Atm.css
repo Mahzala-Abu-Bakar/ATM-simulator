@@ -558,8 +558,7 @@ button:hover {
   #lockdown-screen p {
     font-size: 14px;
   }
-
-  /* Stage 3: ATM Terminal (Scrolls internally if screen is short) */
+  
   #third-screen {
     width: 92%;
     max-height: 90vh;
