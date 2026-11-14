@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Atm.css">
+  <title>Black Hole Transition</title>
+</head>
+
+<body>
+
+  <!-- lightnning light/flash after the pin is enterd correct to go onnext pae -->
+  <div id="flash-light"></div>
+
+  <!-- blackhole open -->
+  <div id="blackhole-vortex"></div>
+
+  <!-- lockdown red screen Security Alert! -->
+  <div id="lockdown-screen">
+    <h1>CRITICAL LOCKDOWN</h1>
+    <p>SECURITY LIMIT EXCEEDED. ACCESS TERMINATED.</p>
+  </div>
+
+  <!-- page 1: Login page -->
+  <div id="first-screen">
+    <div id="login-screen">
+      <h2>ENTER ACCESS KEY</h2>
+      <input type="password" id="password-input" placeholder="Hint: 1234" autocomplete="off">
+      <br>
+      <button onclick="checkPassword()">SUBMIT</button>
+      <div id="error-msg"></div>
+    </div>
+  </div>
+
+  <!-- page 2 -->
+  <div id="next-screen">
+    <h1>Welcome to the Other Side</h1>
+    <p style="color: #a4b0be; margin-top: 10px;">You successfully enterd the ATM.</p>
+    <button class="success-btn" onclick="alert('Accessing transaction menu...'); proceedToPage3()">PROCEED TO
+      SYSTEM</button>
+  </div>
+
+  <!-- Stage 3: Secure ATM Portal -->
+  <div id="third-screen">
+    <div id="pg3">
+      <h2>ATM TERMINAL</h2>
+
+      <!-- Balance -->
+      <div id="balance-panel">
+        <button class="action-btnone" id="checkbalbtn" onclick="BalanceShow()">CHECK BALANCE</button>
+
+        <div id="balance-display-box">
+          <span id="balance-value"></span>
+        </div>
+      </div>
+
+
+      <div class="atmfunc">
+        <!-- Withdraw -->
+        <div id="withdraw-amm" class="withdraw">
+          <h3>WITHDRAW</h3>
+          <input type="number" id="withdraw-input" placeholder="Amount ($)" />
+          <button class="action-btn" onclick=" checkWithdraw()">SUBMIT</button>
+        </div>
+
+        <!-- Deposit -->
+        <div id="deposit-amm" class="deposit">
+          <h3>DEPOSIT</h3>
+          <input type="number" id="deposit-input" placeholder="Amount ($)" />
+          <button class="action-btn" onclick="checkDeposit()">SUBMIT</button>
+        </div>
+      </div>
+
+      <!--Message Output -->
+      <div id="error-msg-atm"></div>
+
+      <!-- exit button -->
+      <button class="exit-btn" onclick="exitATM()">EXIT ATM</button>
+    </div>
+  </div>
+
+
+  <script src="Atm.js"> </script>
+</body>
+
+</html>
